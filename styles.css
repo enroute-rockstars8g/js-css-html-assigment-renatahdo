@@ -1,29 +1,214 @@
-html, body {
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=League+Script&family=Poppins&display=swap');
+
+html, body, h1, h2, h3, h4, h5, h6, p {
 	margin: 0;
 	padding: 0;
 	border: 0;
 }
 
 h1 {
-    margin: 0;
-	padding: 0;
-	border: 0;
+    font-family: 'DM Serif Display', serif;
+    font-size: 4rem;
+    font-weight: 300;
+}
+
+h2 {
+    font-family: 'League Script', cursive;
+    font-size: 2rem;
+    margin-top: 5rem;
+    padding-left: 1rem;
+    margin-bottom: -1.5rem;
+}
+
+h3 {
+    font-family: 'League Script', cursive;
+    font-size: 3rem;
+    text-align: right;
+    margin-top: -0.8rem;
+}
+
+h4 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+    margin-top: 3rem;
+    font-weight: 300;
+    letter-spacing: normal;
+}
+
+p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    margin-top: 1rem;
+    letter-spacing: normal;
+    line-height: 35px;
+}
+
+a {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    margin: 0 1rem;
+    color: black;
+    text-decoration: none;
+    letter-spacing: normal;
+
+}
+
+a:hover {
+    text-decoration: underline;
 }
 
 .background {
-    width: 100vw;
+    width: 100%;
     height: 100vh;
     background-image: url("/public/pink-bg.svg");
     background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: top;
+    background-position: left top;
 }
 
 .container {
-    width: 30%;
-    background-color: yellow;
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 3rem;
+}
+
+.button-container {
+    width: 70%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-container {
+    width: 80%;
+    margin: auto;
+    text-align: right;
+    padding-top: 4rem;
+}
+
+.profile-container {
+    width: 80%;
+    margin: auto;
+    margin-bottom: 5rem;
+}
+
+.title-container {
+    width: 45%;
+}
+
+.activity-container {
+    width: 45%;
+    margin: auto;
+    padding-top: 5rem;
 }
 
 .profile-pic {
-    
+    width: 35%;
+}
+
+.profile-title {
+    width: 10rem;
+    margin-top: -2rem;
+    background-color: #F5E5D3;
+    transform: rotate(350deg);
+}
+
+.black-line {
+    height: 1px;
+    width: 22rem;
+    margin: 1rem 0;
+    background-color: black;
+}
+
+input {
+    width: 10rem;
+    height: 2rem;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 0.25rem;
+    margin-right: 2rem;
+    padding: 0.5rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+input:focus, textarea:focus, select:focus{
+    outline: none;
+}
+
+input:invalid {
+    border: 3px solid red;
+}
+
+button {
+  align-items: center;
+  background-color: #FFFFFF;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 0.25rem;
+  box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+  box-sizing: border-box;
+  color: rgba(0, 0, 0, 0.85);
+  cursor: pointer;
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  margin: 0;
+  min-height: 3rem;
+  padding: 0 1rem;
+  text-decoration: none;
+  transition: all 250ms;
+}
+
+button:hover, button:focus {
+  border-color: rgba(0, 0, 0, 0.15);
+  box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+  color: rgba(0, 0, 0, 0.65);
+}
+
+button:hover {
+  transform: translateY(-1px);
+}
+
+button:active {
+  background-color: #F0F0F1;
+  border-color: rgba(0, 0, 0, 0.15);
+  box-shadow: rgba(0, 0, 0, 0.06) 0 2px 4px;
+  color: rgba(0, 0, 0, 0.65);
+  transform: translateY(0);
+}
+
+.wrapper {
+    width: 50%;
+    margin: auto;
+    text-align: center;
+    height: 50vh;
+}
+
+span {
+    -webkit-text-stroke-width: 1.25px;
+    -webkit-text-stroke-color: #000;
+    font-size: 6rem;
+    text-shadow: 0 0px #f3c623, 0 0px #f2aaaa;
+    transform: translate(0, 100%) rotate(4deg);
+    animation: jump 2s ease-in-out infinite;
+    display: inline-block;
+    font-family: 'DM Serif Display', serif;
+    color: #fff;
+    margin-top: 5rem;
+}
+
+@keyframes jump {
+    33% {
+        text-shadow: 0 60px #f37121, 0 120px #f2aaaa;
+    }
+    50% {
+        transform: translate(0, 0) rotate(-4deg);
+        text-shadow: 0 0px #f2aaaa, 0 0px #d54062;
+    }
+    66.67% {
+        text-shadow: 0 -60px #d54062, 0 -120px #f37121;
+    }
 }
