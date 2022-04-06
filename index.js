@@ -19,7 +19,9 @@ const calculateFibonacci = () => {
             else {
                 array.push(array[i - 1] + array[i - 2]);
             }
+            console.log(array);
             if(i == numberFibo - 1){
+                console.log(array[i]);
                 result = array[i];
             }
         }
